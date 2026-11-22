@@ -21,8 +21,44 @@
   <url type="bugtracker">https://github.com/fwupd/fwupd-efi/issues</url>
   <url type="homepage">https://fwupd.org/</url>
   <update_contact>richard_at_hughsie.com</update_contact>
+  <developer_name>The fwupd authors</developer_name>
+  <developer id="org.fwupd">
+    <name translate="no">The fwupd authors</name>
+  </developer>
   <content_rating type="oars-1.0"/>
   <releases>
+    <release version="1.7" date="2024-09-20">
+      <description>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Fix compilation with GNU-EFI 4.0</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.6" date="2024-04-15">
+      <description>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Require gnu-efi 3.0.18 or later</li>
+          <li>Ship an objcopy capable LDS for ARM64</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.5" date="2024-03-18">
+      <description>
+        <p>This release fixes the following bugs:</p>
+        <ul>
+          <li>Add loongarch64 support</li>
+          <li>Add RISC-V support</li>
+          <li>Add SBOM section to linker and crt0 scripts</li>
+          <li>Align the data section to 64K on ARM64</li>
+          <li>Downgrade the .note.GNU-stack failure to a warning</li>
+          <li>Only use 4K pages on ARM32</li>
+          <li>Remove 64K gap on ARM32</li>
+          <li>Some UEFI 2.10 fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4" date="2023-01-27">
       <description>
         <p>This release fixes the following bugs:</p>
