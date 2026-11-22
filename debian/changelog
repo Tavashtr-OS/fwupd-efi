@@ -1,3 +1,11 @@
+fwupd-efi (1:1.7-1+0tavashtr1) tavashtr; urgency=medium
+
+  [ From Debian ]
+  * New upstream veresion (1.7)
+
+
+ -- Himanshu Kumar Gupta <himanshukumargupta@tavashtr.com>  Sun, 22 Nov 2026 15:25:01 +0000
+
 fwupd-efi (1:1.4-1+0tavashtr1) tavashtr; urgency=medium
 
   [ From Tavashtr ]
