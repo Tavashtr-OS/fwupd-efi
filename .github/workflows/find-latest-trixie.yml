@@ -167,7 +167,7 @@ jobs:
           test "$(dpkg-parsechangelog -l "$source_dir/debian/changelog" -S Version)" = "$NEW_VERSION"
 
           # Mirror the new snapshot, including deletions, while preserving Git metadata.
-          rsync -a --delete --exclude='.git' "$source_dir/" ./
+          rsync -a --delete --exclude='.git' --exclude='.github/workflows' "$source_dir/" ./
           git add -f -A
           git config user.name "Tavashtr Sync Bot"
           git config user.email "githubci@tavashtr.com"
