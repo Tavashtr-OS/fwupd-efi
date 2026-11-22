@@ -1,5 +1,6 @@
-fwupd-efi (1:1.4-1+0tavashtr1) UNRELEASED; urgency=medium
+fwupd-efi (1:1.4-1+0tavashtr1) tavashtr; urgency=medium
 
+  [ From Tavashtr ]
   * Added tavashtr sbat row
   * Added tavashtr Github workflows and scripts
 
