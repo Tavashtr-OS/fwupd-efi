@@ -1,0 +1,38 @@
+--- a/efi/generate_sbat.py
++++ b/efi/generate_sbat.py
+@@ -11,7 +11,7 @@
+ import sys
+ import argparse
+ import tempfile
+-
++import re
+ 
+ def _generate_sbat(args):
+     """append SBAT metadata"""
+@@ -29,6 +29,12 @@
+     if not args.sbat_distro_id:
+         return
+ 
++    tavashtr_sbat_distro_version = args.sbat_distro_version
++    sbat_distro_version = args.sbat_distro_version
++
++    if re.search(r"\+0tavashtr\d+$", sbat_distro_version):
++      args.sbat_distro_version = re.sub(r"\+0tavashtr\d+$", "", sbat_distro_version)
++
+     with tempfile.NamedTemporaryFile() as sfd:
+ 
+         # spec
+@@ -65,6 +71,13 @@
+             ).encode()
+         )
+ 
++        # Append the Tavashtr SBAT row after the existing rows.
++        sbat_entry = (
++            f"{args.project_name}.tavashtr,1,Tavashtr OS,fwupd,"
++            f"{tavashtr_sbat_distro_version},https://github.com/Tavashtr-OS\n"
++        )
++        sfd.write(sbat_entry.encode())
++
+         # all written
+         sfd.seek(0)
+ 
