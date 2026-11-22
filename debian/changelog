@@ -1,3 +1,10 @@
+fwupd-efi (1:1.4-1+0tavashtr1) UNRELEASED; urgency=medium
+
+  * Added tavashtr sbat row
+  * Added tavashtr Github workflows and scripts
+
+ -- Himanshu Kumar Gupta <himanshukumargupta@tavashtr.com>  Sun, 22 Nov 2026 18:37:36 +0530
+
 fwupd-efi (1:1.4-1) unstable; urgency=medium
 
   [ Mario Limonciello ]
